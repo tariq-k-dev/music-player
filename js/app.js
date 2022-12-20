@@ -125,7 +125,7 @@ playBtn.addEventListener('click', () => {
   playBtn.style.backgroundColor = 'rgba(72, 219, 251, 1)';
   pauseBtn.removeAttribute('style');
 
-  if (currentSong.innerText && player.paused) {
+  if (currentSong.innerText && player.paused && player.readyState) {
     player.play();
   } else if (!currentSong.innerText) {
     source.src = `songs/${songs[0].source}`;
