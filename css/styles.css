@@ -127,7 +127,7 @@ footer p a:hover {
 #controls {
   border: 2px solid rgb(52, 31, 151);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   width: 24rem;
 }
 #controls #current-song {
@@ -156,20 +156,14 @@ footer p a:hover {
 .controls-wrapper p:first-of-type {
   margin-bottom: 0.5rem;
 }
-.controls-wrapper .play,
+.controls-wrapper #play,
 .controls-wrapper #pause {
   border-radius: 0.3rem;
   color: rgb(52, 31, 151);
   cursor: pointer;
   display: inline-block;
   font-size: 1.8rem;
-  padding: 0.1rem;
-}
-.controls-wrapper #pause {
   padding: 0.1rem 0.3rem;
-}
-.controls-wrapper #pause .last-bar {
-  margin-left: -0.4rem;
 }
 .controls-wrapper #current-time,
 .controls-wrapper #duration {
@@ -187,7 +181,7 @@ footer p a:hover {
   height: 1rem;
 }
 .controls-wrapper .volume {
-  height: 2rem;
+  height: 1.5rem;
 }
 .controls-wrapper .volume #decrease,
 .controls-wrapper .volume #increase {
@@ -227,6 +221,6 @@ footer p a:hover {
     width: 100%;
   }
   .player #controls {
-    width: 22rem;
+    width: 20rem;
   }
 }/*# sourceMappingURL=styles.css.map */

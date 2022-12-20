@@ -96,7 +96,7 @@ const songs = [{
   }
 ];
 const songListElem = document.getElementById('song-list');
-const playBtn = document.querySelector('.play');
+const playBtn = document.querySelector('#play');
 const pauseBtn = document.querySelector('#pause');
 const player = document.getElementById('player');
 const source = document.getElementById('source');
