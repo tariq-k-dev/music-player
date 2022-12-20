@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  color: rgb(52, 31, 151);
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url(../images/Glowing-musical-pentagram-1.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: #011d2e;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-size: 10px;
+}
+
+header {
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+i {
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+audio {
+  margin: 1rem 0 0;
+}
+
+footer {
+  border-top: 1px solid rgb(52, 31, 151);
+  margin: 1.5rem 0;
+}
+footer h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin: 1rem 0 0.5rem;
+}
+footer p {
+  line-height: 2rem;
+  margin-top: 0.2rem;
+}
+footer p:last-of-type {
+  text-align: center;
+}
+footer p a {
+  background-color: transparent;
+  border-bottom: 1px solid rgb(52, 31, 151);
+  color: rgb(52, 31, 151);
+  font-size: 1rem;
+  padding: 0.1rem 0;
+  padding-bottom: 0.1rem;
+  text-decoration: none;
+  transition: 0.4s border-bottom ease-out, 0.4s background-color ease-out;
+}
+footer p a:hover {
+  background-color: rgb(72, 219, 251);
+  border-bottom: 1px solid transparent;
+}
+
+.headphones {
+  border-radius: 50%;
+  height: auto;
+  width: 20rem;
+  margin: 1rem 0 0;
+}
+
+.scale-image {
+  -webkit-animation: scaling-image-animation 0.5s ease;
+          animation: scaling-image-animation 0.5s ease;
+}
+
+@-webkit-keyframes scaling-image-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaling-image-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.player {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#controls {
+  border: 2px solid rgb(52, 31, 151);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 24rem;
+}
+#controls #current-song {
+  background-color: rgb(23, 192, 235);
+  background-color: rgb(72, 219, 251);
+  border-radius: 0.3rem;
+  color: rgb(52, 31, 151);
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 2rem;
+  line-height: 2rem;
+  width: 10rem;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.controls-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.controls-wrapper p:first-of-type {
+  margin-bottom: 0.5rem;
+}
+.controls-wrapper .play,
+.controls-wrapper #pause {
+  border-radius: 0.3rem;
+  color: rgb(52, 31, 151);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 0.1rem;
+}
+.controls-wrapper #pause {
+  padding: 0.1rem 0.3rem;
+}
+.controls-wrapper #pause .last-bar {
+  margin-left: -0.4rem;
+}
+.controls-wrapper #current-time,
+.controls-wrapper #duration {
+  display: inline-block;
+  line-height: 2rem;
+  margin-top: -1.5rem;
+  vertical-align: middle;
+}
+.controls-wrapper #seek-slider,
+.controls-wrapper #volume-slider {
+  cursor: pointer;
+  height: 2rem;
+}
+.controls-wrapper #seek-slider::-webkit-slider-runnable-track {
+  height: 1rem;
+}
+.controls-wrapper .volume {
+  height: 2rem;
+}
+.controls-wrapper .volume #decrease,
+.controls-wrapper .volume #increase {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+.controls-wrapper .volume #decrease {
+  font-size: 1.8rem;
+  margin-top: -1.8rem;
+}
+.controls-wrapper .volume #increase {
+  font-size: 1.5rem;
+  margin-top: -1.5rem;
+}
+
+#song-list ol li {
+  background-color: transparent;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  list-style-position: inside;
+  line-height: 1.7rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0 0.4rem;
+  transition: background-color 0.4s ease-in-out;
+}
+#song-list ol li:hover {
+  background-color: rgb(72, 219, 251);
+}
+
+@media screen and (max-width: 768px) {
+  .player {
+    width: 100%;
+  }
+  .player #controls {
+    width: 22rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
